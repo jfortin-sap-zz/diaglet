@@ -1,0 +1,20 @@
+# permissions for end users to view diags.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: diag-viewer-role
+rules:
+- apiGroups:
+  - sre.example.com
+  resources:
+  - diags
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - sre.example.com
+  resources:
+  - diags/status
+  verbs:
+  - get

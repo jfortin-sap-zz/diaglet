@@ -1,0 +1,10 @@
+apiVersion: sre.example.com/v1
+kind: Diag
+metadata:
+  name: diaglet
+spec:
+  probeAPIServer: true
+  probeShootLastOperation: true
+  probeShootConditions: true
+  probeWorkerNodes: true
+  probeControlPlane: true

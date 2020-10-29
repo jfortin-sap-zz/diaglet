@@ -1,0 +1,24 @@
+# permissions for end users to edit diags.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: diag-editor-role
+rules:
+- apiGroups:
+  - sre.example.com
+  resources:
+  - diags
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - sre.example.com
+  resources:
+  - diags/status
+  verbs:
+  - get

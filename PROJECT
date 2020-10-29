@@ -1,0 +1,7 @@
+domain: example.com
+repo: diag
+resources:
+- group: sre
+  kind: Diag
+  version: v1
+version: "2"
